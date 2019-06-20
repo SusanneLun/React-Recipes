@@ -1,0 +1,11 @@
+{ this.state.recipes.map((recipe) => {
+  return (
+    <div key={recipe.recipe_id}>
+      <img src={recipe.image_url} alt={recipe.title}/>
+      <p >{ recipe.title }</p>
+
+
+      <form onSubmit={props.getRecipe} style={{ marginBottom:"2rem"}}>
+        <input className="form__input" type="text" name="recipeName"/>
+        <button className="form__button">Search</button>
+      </form>
